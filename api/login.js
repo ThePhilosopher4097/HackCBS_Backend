@@ -1,12 +1,14 @@
 
 const express = require('express')
+const { get } = require('mongoose')
 const router = express.Router()
 
-router.get('/', (request, response) => {
-    response.status(200).json({message:'Register api test'})
-})
-router.post('/', (request, response) => {
-    response.status(200).json({message:'Register api test'})
-})
+const {
+    validateUser,
+    verifyUser
+} = require('../controller/loginController')
+
+router.route('/validate').get(validateUser)
+router.route('/verify').get(verifyUser)
 
 module.exports = router

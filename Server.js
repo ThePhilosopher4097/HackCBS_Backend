@@ -11,7 +11,7 @@ const app = express()
     res.status(200).json({message:'Okay!'})
 })*/
 app.use('/api/register', require('./api/register'))
-//app.use('./api/login', require('./api/login'))
+app.use('./api/login', require('./api/login'))
 //app.use('./api/userdocs', require('./api/getUserDocuments'))
 
 app.listen(port, () => console.log(`Server started on Port ${port}`))
