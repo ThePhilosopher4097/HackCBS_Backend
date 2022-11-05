@@ -6,11 +6,11 @@ const port = process.env.PORT || 5000
 
 const app = express()
 
-//app.use('/api/register', require('./api/register'))
-app.get('/', (req,res) => {
+/*app.get('/', (req,res) => {
     console.log('Hello !')
     res.status(200).json({message:'Okay!'})
-})
+})*/
+app.use('/api/register', require('./api/register'))
 //app.use('./api/login', require('./api/login'))
 //app.use('./api/userdocs', require('./api/getUserDocuments'))
 
