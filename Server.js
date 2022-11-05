@@ -21,6 +21,7 @@ app.use(express.urlencoded({extended:false}))
 
 app.use('/api/register', require('./api/register'))
 app.use('/api/login', require('./api/login'))
+app.use('/api/getUser', require('./api/getUser'))
 //app.use('./api/userdocs', require('./api/getUserDocuments'))
 
 app.listen(port, () => console.log(`Server started on Port ${port}`))

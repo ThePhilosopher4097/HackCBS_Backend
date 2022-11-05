@@ -4,14 +4,6 @@ const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 
 // @desc Login the user
-// @route GET /api/login/validate
-// @access Private
-const validateUser = asyncHandler( async (request, response) => {
-    const user = await User.find()
-    response.status(200).json({User: user})
-
-})
-// @desc Login the user
 // @route GET /api/login/verify
 // @access Private
 const verifyUser = asyncHandler( async (request, response) => {
@@ -19,6 +11,5 @@ const verifyUser = asyncHandler( async (request, response) => {
 })
 
 module.exports = {
-    validateUser,
     verifyUser
 }
