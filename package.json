@@ -1,0 +1,11 @@
+{
+  "name": "backend-node-server",
+  "version": "1.0.0",
+  "description": "Xgppians Doc-share",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xgppians",
+  "license": "MIT"
+}
