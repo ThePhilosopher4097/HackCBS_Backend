@@ -18,6 +18,10 @@ const userSchema = mongoose.Schema(
         usertype:{
             type: String,
             require: [true, 'Please select user-type']
+        },
+        password:{
+            type: String,
+            require: [true, 'Please set a password']
         }
     },
     {

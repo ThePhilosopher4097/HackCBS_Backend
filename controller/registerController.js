@@ -12,8 +12,9 @@ const registerUser = asyncHandler( async (request, response) => {
     const email = request.body.email
     const phone = request.body.phone
     const usertype = request.body.usertype
+    const password = request.body.password
 
-    if (!name || !email || !phone || !usertype) {
+    if (!name || !email || !phone || !usertype || !password) {
         response.status(400).json({message:'Please add data.'})    
         throw new Error('Please add the required data')
     }
@@ -22,7 +23,8 @@ const registerUser = asyncHandler( async (request, response) => {
         name: name,
         email: email,
         phone: phone,
-        usertype: usertype
+        usertype: usertype,
+        password: password
     })
     response.status(200).json({message:'Success : User Registered !', User:user})
 })
