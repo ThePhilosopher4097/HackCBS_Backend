@@ -3,11 +3,11 @@ const router = express.Router()
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 
-// @desc Get user object
-// @route GET /api/getUser
+// @desc delete the user object
+// @route DELETE /api/user
 // @access Private
-router.route('/').get((asyncHandler( async (request, response) => {
-    const user = await User.delete() //this is not correct
+router.route('/').delete((asyncHandler( async (request, response) => {
+    const user = await User.deleteOne({"email":request.body.email}) 
     response.status(200).json({User: user})
 })))
 
